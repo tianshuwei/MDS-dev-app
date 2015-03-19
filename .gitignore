@@ -165,5 +165,11 @@ $RECYCLE.BIN/
 # =========================
 *.pyc
 tmp/
-deployment/*
+deployment/
 */migrations/
+
+# =========================
+# Sublime-text ignore
+# =========================
+*.sublime-*
+
