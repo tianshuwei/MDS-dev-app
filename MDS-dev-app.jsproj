@@ -111,6 +111,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Content Include="css\index.css" />
     <Content Include="css\mobile\ratchet-theme-android.css" />
     <Content Include="css\mobile\ratchet-theme-android.min.css" />
     <Content Include="css\mobile\ratchet-theme-ios.css" />
@@ -123,6 +124,19 @@
     <Content Include="css\web\bootstrap.css" />
     <Content Include="css\web\bootstrap.css.map" />
     <Content Include="css\web\bootstrap.min.css" />
+    <Content Include="fonts\css\index.css" />
+    <Content Include="fonts\css\mobile\ratchet-theme-android.css" />
+    <Content Include="fonts\css\mobile\ratchet-theme-android.min.css" />
+    <Content Include="fonts\css\mobile\ratchet-theme-ios.css" />
+    <Content Include="fonts\css\mobile\ratchet-theme-ios.min.css" />
+    <Content Include="fonts\css\mobile\ratchet.css" />
+    <Content Include="fonts\css\mobile\ratchet.min.css" />
+    <Content Include="fonts\css\web\bootstrap-theme.css" />
+    <Content Include="fonts\css\web\bootstrap-theme.css.map" />
+    <Content Include="fonts\css\web\bootstrap-theme.min.css" />
+    <Content Include="fonts\css\web\bootstrap.css" />
+    <Content Include="fonts\css\web\bootstrap.css.map" />
+    <Content Include="fonts\css\web\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -132,12 +146,6 @@
     <Content Include="fonts\ratchicons.svg" />
     <Content Include="fonts\ratchicons.ttf" />
     <Content Include="fonts\ratchicons.woff" />
-    <Content Include="lib\bootstrap\bootstrap.js" />
-    <Content Include="lib\bootstrap\bootstrap.min.js" />
-    <Content Include="lib\bootstrap\npm.js" />
-    <Content Include="lib\jsviews.js" />
-    <Content Include="lib\ratchet\ratchet.js" />
-    <Content Include="lib\ratchet\ratchet.min.js" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
@@ -193,8 +201,13 @@
     <Content Include="plugins\org.apache.cordova.geolocation\www\PositionError.js" />
     <Content Include="README.md" />
     <Content Include="scripts\index.js" />
+    <Content Include="scripts\lib\bootstrap\bootstrap.js" />
+    <Content Include="scripts\lib\bootstrap\bootstrap.min.js" />
+    <Content Include="scripts\lib\bootstrap\npm.js" />
+    <Content Include="scripts\lib\jsviews.js" />
+    <Content Include="scripts\lib\ratchet\ratchet.js" />
+    <Content Include="scripts\lib\ratchet\ratchet.min.js" />
     <Content Include="scripts\platformOverrides.js" />
-    <Content Include="css\index.css" />
     <Content Include="res\icons\android\icon-36-ldpi.png" />
     <Content Include="res\icons\android\icon-48-mdpi.png" />
     <Content Include="res\icons\android\icon-72-hdpi.png" />
