@@ -110,7 +110,6 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="images\" />
     <Content Include="css\index.css" />
     <Content Include="css\mobile\ratchet-theme-android.css" />
     <Content Include="css\mobile\ratchet-theme-android.min.css" />
@@ -124,19 +123,6 @@
     <Content Include="css\web\bootstrap.css" />
     <Content Include="css\web\bootstrap.css.map" />
     <Content Include="css\web\bootstrap.min.css" />
-    <Content Include="fonts\css\index.css" />
-    <Content Include="fonts\css\mobile\ratchet-theme-android.css" />
-    <Content Include="fonts\css\mobile\ratchet-theme-android.min.css" />
-    <Content Include="fonts\css\mobile\ratchet-theme-ios.css" />
-    <Content Include="fonts\css\mobile\ratchet-theme-ios.min.css" />
-    <Content Include="fonts\css\mobile\ratchet.css" />
-    <Content Include="fonts\css\mobile\ratchet.min.css" />
-    <Content Include="fonts\css\web\bootstrap-theme.css" />
-    <Content Include="fonts\css\web\bootstrap-theme.css.map" />
-    <Content Include="fonts\css\web\bootstrap-theme.min.css" />
-    <Content Include="fonts\css\web\bootstrap.css" />
-    <Content Include="fonts\css\web\bootstrap.css.map" />
-    <Content Include="fonts\css\web\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
