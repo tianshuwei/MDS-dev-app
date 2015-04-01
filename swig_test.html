@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+// swig.renderFile('./template.html', {}, function (err, output) {
+//   if (err) {
+//     throw err;
+//   }
+//   console.log(output);
+// });
+
+// swig.run(foo, {}, '/myfile.html');
+</script>
+<script type="text/javascript" src="scripts/lib/swig.js"></script>
+<script type="text/javascript" src="scripts/lib/jquery-1.8.1.min.js"></script>
+<script id="template" type="text/plain"></script> 
+<script type="text/javascript">
+// $.get('res/templates/swig_test.html', function (data) {
+// 	$('body').html(data);
+// });
+
+$("#template").load('swig_test_t.html');
+
+
+// // $('div').html(swig.render('{% if foo %}Hooray!{% endif %}', { locals: { foo: true }}));
+
+$(function () {
+	var template=$("#template").text();
+	console.debug(template);
+	$('html').html(swig.render(template, { locals: { 
+		pagename: 'awesome people',
+	    authors: ['Paul', 'Jim', 'Jane'] 
+	}}));
+});
+</script>
+
+<!--<script id="template" type="text/plain">
+
+<head>
+<title>haha</title>
+</head>
+<body>
+<h1>{{ pagename|title }}</h1>
+<ul>
+{% for author in authors %}
+  <li{% if loop.first %} class="first"{% endif %}>
+    {{ author }}
+  </li>
+{% endfor %}
+</ul>
+</body>	
+
+</script>-->
+
+</head>
+<body></body>
+</html>
