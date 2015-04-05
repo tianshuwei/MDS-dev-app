@@ -111,6 +111,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="css\index.css" />
+    <Content Include="css\mobile\ionic.css" />
+    <Content Include="css\mobile\ionic.min.css" />
     <Content Include="css\mobile\ratchet-theme-android.css" />
     <Content Include="css\mobile\ratchet-theme-android.min.css" />
     <Content Include="css\mobile\ratchet-theme-ios.css" />
@@ -128,14 +130,32 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.svg" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
     <Content Include="fonts\ratchicons.eot" />
     <Content Include="fonts\ratchicons.svg" />
     <Content Include="fonts\ratchicons.ttf" />
     <Content Include="fonts\ratchicons.woff" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
-    <Content Include="scripts\lib\angular\angular-route.js" />
-    <Content Include="scripts\lib\angular\angular.js" />
+    <Content Include="scripts\lib\ionic\angular-ui\angular-ui-router.js" />
+    <Content Include="scripts\lib\ionic\angular-ui\angular-ui-router.min.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-animate.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-animate.min.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-resource.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-resource.min.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-sanitize.js" />
+    <Content Include="scripts\lib\ionic\angular\angular-sanitize.min.js" />
+    <Content Include="scripts\lib\ionic\angular\angular.js" />
+    <Content Include="scripts\lib\ionic\angular\angular.min.js" />
+    <Content Include="scripts\lib\ionic\ionic-angular.js" />
+    <Content Include="scripts\lib\ionic\ionic-angular.min.js" />
+    <Content Include="scripts\lib\ionic\ionic.bundle.js" />
+    <Content Include="scripts\lib\ionic\ionic.bundle.min.js" />
+    <Content Include="scripts\lib\ionic\ionic.js" />
+    <Content Include="scripts\lib\ionic\ionic.min.js" />
     <Content Include="scripts\tools.js" />
     <Content Include="views\app\base.html" />
     <Folder Include="img\phones\" />
