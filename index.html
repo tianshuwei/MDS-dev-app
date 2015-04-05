@@ -1,105 +1,37 @@
 ﻿<!DOCTYPE html>
-
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Mail</title>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-	<link rel="stylesheet" href="css/mobile/ratchet.css">
-	<link rel="stylesheet" href="css/mobile/ratchet-theme-android.min.css">
-	<script src="scripts/lib/ratchet/ratchet.min.js"></script>
-	<!-- Cordova reference, this is added to your app when it's built. -->
-	<script src="cordova.js"></script>
-	<script src="scripts/platformOverrides.js"></script>
-	<script src="scripts/index.js"></script>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
-</head>
-<body ryt13728="1">
-	<header class="bar bar-nav">
-		<a class="icon icon-refresh pull-right"></a>
-		<h1 class="title"><a href="hello.html">Mailboxes</a></h1><!--!!!!!!-->
-	</header>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
 
-	<div class="bar bar-footer">
-		<a class="icon icon-compose pull-right" href="#composeModal"></a>
-		<small class="updated-text">Updated just now</small>
-	</div>
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  </head>
+  <body ng-app="todo">
+    <ion-side-menus>
 
-	<div class="content">
+      <!-- Center content -->
+      <ion-side-menu-content>
+        <ion-header-bar class="bar-dark">
+          <h1 class="title">Todo</h1>
+        </ion-header-bar>
+        <ion-content>
+        </ion-content>
+      </ion-side-menu-content>
 
-		<ul class="table-view">
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-pages pull-left"></span>
-					<div class="media-body">
-						All inboxes
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-person pull-left"></span>
-					<div class="media-body">
-						Personal email
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-star-filled pull-left"></span>
-					<div class="media-body">
-						Starred
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-trash pull-left"></span>
-					<div class="media-body">
-						Trash
-					</div>
-				</a>
-			</li>
-		</ul>
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar-dark">
+          <h1 class="title">Projects</h1>
+        </ion-header-bar>
+      </ion-side-menu>
 
-		<h5 class="content-padded">Other accounts</h5>
-		<ul class="table-view">
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-more pull-left"></span>
-					<div class="media-body">
-						Misc
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div><!-- /.content -->
-	<!-- Compose modal -->
-	<div id="composeModal" class="modal">
-		<header class="bar bar-nav">
-			<a class="btn btn-link pull-right" href="#composeModal">
-				<strong>Send</strong>
-			</a>
-			<a class="btn btn-link pull-left" href="#composeModal">
-				Cancel
-			</a>
-			<h1 class="title">New message</h1>
-		</header>
-
-		<div class="content">
-			<form class="input-group">
-				<input type="text" placeholder="To:">
-				<input type="email" placeholder="From:">
-				<input type="text" placeholder="Subject:">
-				<textarea rows="20"></textarea>
-			</form>
-		</div>
-	</div><!-- /.modal -->
-
-
-
-</body>
+    </ion-side-menus>
+  </body>
 </html>
