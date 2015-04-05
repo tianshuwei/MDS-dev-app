@@ -134,6 +134,9 @@
     <Content Include="fonts\ratchicons.woff" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="scripts\lib\angular\angular-route.js" />
+    <Content Include="scripts\lib\angular\angular.js" />
+    <Content Include="scripts\tools.js" />
     <Content Include="views\app\base.html" />
     <Folder Include="img\phones\" />
     <Folder Include="merges\ios\" />
