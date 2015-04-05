@@ -110,6 +110,7 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="css\app.css" />
     <Content Include="css\index.css" />
     <Content Include="css\mobile\ratchet-theme-android.css" />
     <Content Include="css\mobile\ratchet-theme-android.min.css" />
@@ -132,12 +133,14 @@
     <Content Include="fonts\ratchicons.svg" />
     <Content Include="fonts\ratchicons.ttf" />
     <Content Include="fonts\ratchicons.woff" />
+    <Content Include="hello.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />
     <Folder Include="merges\wp8\" />
+    <Folder Include="res\app\" />
     <Folder Include="res\icons\android\" />
     <Folder Include="res\icons\ios\" />
     <Folder Include="res\icons\wp8\" />
