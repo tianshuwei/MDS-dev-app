@@ -5,33 +5,77 @@
     <title>Todo</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/mobile/ionic.css" rel="stylesheet">
 
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="scripts/app.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
   </head>
-  <body ng-app="todo">
-    <ion-side-menus>
+  <body>
+<!--顶部-->  
+    <div class="row">
+      <div class="col col-15">
+        上海
+      </div>
+      <div class="col-75">
+        <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+          </label>
+        </div>
+      </div>
+      <div class="col-10">
+        <i class="icon ion-star"></i>
+      </div>
+    </div>
+<!--底部-->
+    <div class="tabs tabs-icon-top">
+      <a class="tab-item">
+        <i class="icon ion-home"></i>
+        Home
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+<!--中间-->
+    <div>
+      <div class="row">
+        <div class="col"><img class="full-image" src="1.png">分类1</div>
+        <div class="col"><img class="full-image" src="1.png">分类2</div>
+        <div class="col"><img class="full-image" src="1.png">分类3</div>
+        <div class="col"><img class="full-image" src="1.png">分类4</div>
+      </div>
+      <div class="row">
+        <div class="col"><img class="full-image" src="1.png">分类5</div>
+        <div class="col"><img class="full-image" src="1.png">分类6</div>
+        <div class="col"><img class="full-image" src="1.png">分类7</div>
+        <div class="col"><img class="full-image" src="1.png">分类8</div>
+      </div>
+    </div>
+<!--中间-->
+    <div>
+      <a class="item item-icon-left" href="#">
+        新货推荐
+        <span class="badge badge-assertive">></span>
+      </a>
+    </div>
+<!--中间-->
+    <div class="row">
+      <div class="col"><img class="full-image" src="1.png">oo该片</div>
+      <div class="col"><img class="full-image" src="1.png">xx该片</div>
+      <div class="col"><img class="full-image" src="1.png">该片</div>
+    </div>
+<!--中间-->
+<div></div>
 
-      <!-- Center content -->
-      <ion-side-menu-content>
-        <ion-header-bar class="bar-dark">
-          <h1 class="title">Todo</h1>
-        </ion-header-bar>
-        <ion-content>
-        </ion-content>
-      </ion-side-menu-content>
-
-      <!-- Left menu -->
-      <ion-side-menu side="left">
-        <ion-header-bar class="bar-dark">
-          <h1 class="title">Projects</h1>
-        </ion-header-bar>
-      </ion-side-menu>
-
-    </ion-side-menus>
   </body>
 </html>
