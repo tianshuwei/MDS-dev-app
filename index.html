@@ -1,105 +1,81 @@
 ﻿<!DOCTYPE html>
-
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Mail</title>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-	<link rel="stylesheet" href="css/mobile/ratchet.css">
-	<link rel="stylesheet" href="css/mobile/ratchet-theme-android.min.css">
-	<script src="scripts/lib/ratchet/ratchet.min.js"></script>
-	<!-- Cordova reference, this is added to your app when it's built. -->
-	<script src="cordova.js"></script>
-	<script src="scripts/platformOverrides.js"></script>
-	<script src="scripts/index.js"></script>
+    <link href="css/mobile/ionic.css" rel="stylesheet">
 
-</head>
-<body ryt13728="1">
-	<header class="bar bar-nav">
-		<a class="icon icon-refresh pull-right"></a>
-		<h1 class="title">Mailboxes</h1>
-	</header>
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
 
-	<div class="bar bar-footer">
-		<a class="icon icon-compose pull-right" href="#composeModal"></a>
-		<small class="updated-text">Updated just now</small>
-	</div>
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+<!--顶部-->  
+    <div class="row">
+      <div class="col col-15">
+        上海
+      </div>
+      <div class="col-75">
+        <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+          </label>
+        </div>
+      </div>
+      <div class="col-10">
+        <i class="icon ion-star"></i>
+      </div>
+    </div>
+<!--底部-->
+    <div class="tabs tabs-icon-top">
+      <a class="tab-item">
+        <i class="icon ion-home"></i>
+        Home
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+<!--中间-->
+    <div>
+      <div class="row">
+        <div class="col"><img class="full-image" src="1.png">分类1</div>
+        <div class="col"><img class="full-image" src="1.png">分类2</div>
+        <div class="col"><img class="full-image" src="1.png">分类3</div>
+        <div class="col"><img class="full-image" src="1.png">分类4</div>
+      </div>
+      <div class="row">
+        <div class="col"><img class="full-image" src="1.png">分类5</div>
+        <div class="col"><img class="full-image" src="1.png">分类6</div>
+        <div class="col"><img class="full-image" src="1.png">分类7</div>
+        <div class="col"><img class="full-image" src="1.png">分类8</div>
+      </div>
+    </div>
+<!--中间-->
+    <div>
+      <a class="item item-icon-left" href="#">
+        新货推荐
+        <span class="badge badge-assertive">></span>
+      </a>
+    </div>
+<!--中间-->
+    <div class="row">
+      <div class="col"><img class="full-image" src="1.png">oo该片</div>
+      <div class="col"><img class="full-image" src="1.png">xx该片</div>
+      <div class="col"><img class="full-image" src="1.png">该片</div>
+    </div>
+<!--中间-->
+<div></div>
 
-	<div class="content">
-
-		<ul class="table-view">
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-pages pull-left"></span>
-					<div class="media-body">
-						All inboxes
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-person pull-left"></span>
-					<div class="media-body">
-						Personal email
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-star-filled pull-left"></span>
-					<div class="media-body">
-						Starred
-					</div>
-				</a>
-			</li>
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-trash pull-left"></span>
-					<div class="media-body">
-						Trash
-					</div>
-				</a>
-			</li>
-		</ul>
-
-		<h5 class="content-padded">Other accounts</h5>
-		<ul class="table-view">
-			<li class="table-view-cell media">
-				<a class="navigate-right" href="inbox.html" data-transition="slide-in">
-					<span class="media-object icon icon-more pull-left"></span>
-					<div class="media-body">
-						Misc
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div><!-- /.content -->
-	<!-- Compose modal -->
-	<div id="composeModal" class="modal">
-		<header class="bar bar-nav">
-			<a class="btn btn-link pull-right" href="#composeModal">
-				<strong>Send</strong>
-			</a>
-			<a class="btn btn-link pull-left" href="#composeModal">
-				Cancel
-			</a>
-			<h1 class="title">New message</h1>
-		</header>
-
-		<div class="content">
-			<form class="input-group">
-				<input type="text" placeholder="To:">
-				<input type="email" placeholder="From:">
-				<input type="text" placeholder="Subject:">
-				<textarea rows="20"></textarea>
-			</form>
-		</div>
-	</div><!-- /.modal -->
-
-
-
-</body>
+  </body>
 </html>
