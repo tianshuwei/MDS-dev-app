@@ -159,6 +159,7 @@
     <Content Include="scripts\lib\ionic\ionic.js" />
     <Content Include="scripts\lib\ionic\ionic.min.js" />
     <Content Include="scripts\tools.js" />
+    <Content Include="shop.html" />
     <Content Include="views\app\base.html" />
     <Folder Include="img\phones\" />
     <Folder Include="merges\ios\" />
