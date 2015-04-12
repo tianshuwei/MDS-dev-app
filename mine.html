@@ -1,72 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mail</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<head>
+    <meta charset="utf-8" http-equiv="content-type" content="text/html">
+    <title>我的</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-    <link rel="stylesheet" href="css/mobile/ratchet.css">
-    <link rel="stylesheet" href="css/mobile/ratchet-theme-ios.min.css">
-    <script src="scripts/lib/ratchet/ratchet.min.js"></script>
-    <!-- Cordova reference, this is added to your app when it's built. -->
+    <link href="css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="../angular-1.0.3/angular.min.js"></script>
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
-    <script src="scripts/index.js"></script>
-  </head>
+</head>
+    <!-- ZXQ-04-12修改 -->
+<body ng-app="todo">
+    <ion-content>
+      <img class="full-image" src="1.png">
+      <ion-item >我的购物车</ion-item>
+      <ion-item >我的订单</ion-item>
+      <ion-item >我的资料</ion-item>
+      <ion-item >我的收藏</ion-item>
+      <ion-item >收获地址管理</ion-item>
 
-  <body>
-  <img src="1.png" width="320" height="150">
-    <ul class="table-view">
-  <li class="table-view-cell media">
-    <a class="navigate-right">
-      <span class="media-object pull-left icon icon-info"></span>
-      <div class="media-body">
-        我的购物车
-      </div>
-    </a>
-  </li>
-  <li class="table-view-cell media">
-    <a class="navigate-right">
-      <span class="media-object pull-left icon icon-star"></span>
-      <div class="media-body">
-        我的订单
-      </div>
-    </a>
-  </li>
-  <li class="table-view-cell media">
-    <a class="navigate-right">
-      <span class="media-object pull-left icon icon-person"></span>
-      <div class="media-body">
-        我的资料
-      </div>
-    </a>
-  </li>
-  <a class="tab-item active" href="#">
-    <span class="icon icon-bars">待付款</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-bars">配送中</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-bars">代收货</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-bars">已完成</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-bars">退货中</span>
-  </a>
-  <li class="table-view-cell media">
-    <a class="navigate-right">
-      <span class="media-object pull-left icon icon-star-filled"></span>
-      <div class="media-body">
-        我的收藏
-      </div>
-    </a>
-  </li>
-</ul>
-  </body>
 
+      <div class="list">
+        <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">邮箱</span>
+            <input name="userName" type="text" ng-model="user.userName" placeholder="First Name" required/>
+          </label>
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">密码</span>
+            <input name="password" type="password" ng-model="user.password" placeholder="password"required/>
+          </label>
+          <input class="button button-positive" type="submit" ng-disabled="myForm.$invalid"/>
+
+        </form>
+      </div>
+     
+    </ion-content>
+    <script src="FormBasic.js"></script>
+</body>
 </html>

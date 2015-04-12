@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>更多</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+    <!-- ZXQ-04-12修改 -->
+<body ng-app="todo">
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">更多</h1>
+    </ion-header-bar>
+    <ion-footer-bar class="bar-positive">
+        <a class="tab-item">
+          <i class="icon ion-home"></i>
+          Home
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-star"></i>
+          Favorites
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-gear-a"></i>
+          Settings
+        </a>
+    </ion-footer-bar>
+    <ion-content>
+
+      <ion-refresher on-refresh="doRefresh()">                     
+      </ion-refresher>
+      
+        <ion-item >设置</ion-item>
+        <ion-item >消息提醒</ion-item>
+        <ion-toggle ng-model="item.checked" ng-checked="item.checked">非wifi下使用省流量模式</ion-toggle>
+        <ion-item >分享设置</ion-item>
+        <ion-item >邀请好友使用医用通</ion-item>
+        <ion-item >字号大小</ion-item>
+        <ion-item >清除缓存</ion-item>
+        <ion-item >其他</ion-item>
+        <ion-item >扫一扫</ion-item>
+        <ion-item >意见反馈</ion-item>
+        <ion-item >支付帮助</ion-item>
+        <ion-item >检查更新</ion-item>
+        <ion-item >关于医药通</ion-item>
+    </ion-content>
+</body>
+</html>
