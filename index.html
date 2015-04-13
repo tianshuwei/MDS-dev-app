@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>首页</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -12,35 +12,39 @@
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
-</head>
+  </head>
 <!-- ZXQ-04-12修改 -->
 <body ng-app="todo">
-    <ion-header-bar class="bar-calm">
-        <div class="row">
+    <ion-header-bar class=" item-input-inset bar-positive">
+    <div class="row">
         <div class="col col-20">上海</div>
-        <div class="col col-60"><input type="search" placeholder="Search"></div>
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios7-search placeholder-icon"></i>
+          <input type="search" placeholder="Search">
+        </label>
         <div class="col col-20"><i class="icon ion-star"></i></div>
         </div>
     </ion-header-bar>
 
 
+
     <ion-footer-bar class="bar-calm">
-        <a class="tab-item" href="index.html">
-            <i class="icon ion-home"></i>
-            Home
-        </a>
+        <a class="tab-item">
+        <i class="icon ion-home"></i>
+        Home
+      </a>
         <a class="tab-item" href="mine.html">
-            <i class="icon ion-star"></i>
-            Favorites
-        </a>
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
         <a class="tab-item" href="more.html">
-            <i class="icon ion-gear-a"></i>
-            Settings
-        </a>
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
     </ion-footer-bar>
     <ion-content>
 
-      <div>
+    <div>
       <div class="row">
         <div class="col"><img class="full-image" src="1.png">分类1</div>
         <div class="col"><img class="full-image" src="1.png">分类2</div>
@@ -57,8 +61,8 @@
 <!--中间-->
     <div>
       <a class="item item-icon-left" href="#">
-      新货推荐
-      <span class="badge badge-assertive">></span>
+        新货推荐
+        <span class="badge badge-assertive">></span>
       </a>
     </div>
 <!--中间-->
@@ -80,5 +84,5 @@
       <div class="col"><img class="full-image" src="1.png">大保健</div>
     </div>
     </ion-content>
-</body>
+  </body>
 </html>

@@ -1,23 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" http-equiv="content-type" content="text/html">
     <title>我的</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="css/mobile/ionic.css" rel="stylesheet">
 
+    <script src="../angular-1.0.3/angular.min.js"></script>
     <script src="scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="scripts/app.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
-</head>
+  </head>
     <!-- ZXQ-04-12修改 -->
 <body ng-app="todo">
-    <ion-header-bar class="bar-calm">
-        <h1 class="title">个人中心</h1>
-    </ion-header-bar>
+    <ion-content>
+      <img class="full-image" src="1.png">
+      <ion-item >我的购物车</ion-item>
+      <ion-item >我的订单</ion-item>
+      <ion-item >我的资料</ion-item>
+      <ion-item >我的收藏</ion-item>
+      <ion-item >收获地址管理</ion-item>
 
     <ion-footer-bar class="bar-calm">
         <a class="tab-item" href="index.html">
@@ -42,5 +47,5 @@
       <ion-item >我的收藏</ion-item>
       <ion-item >收获地址管理</ion-item>
     </ion-content>
-</body>
+  </body>
 </html>
