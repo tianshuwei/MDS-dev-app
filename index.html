@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Todo</title>
+    <title>首页</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="css/mobile/ionic.css" rel="stylesheet">
@@ -12,42 +12,35 @@
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
-  </head>
-  <body>
-<!--顶部-->  
-    <div class="row">
-      <div class="col col-15">
-        上海
-      </div>
-      <div class="col-75">
-        <div class="bar bar-header item-input-inset">
-          <label class="item-input-wrapper">
-            <i class="icon ion-ios7-search placeholder-icon"></i>
-            <input type="search" placeholder="Search">
-          </label>
+</head>
+<!-- ZXQ-04-12修改 -->
+<body ng-app="todo">
+    <ion-header-bar class="bar-calm">
+        <div class="row">
+        <div class="col col-20">上海</div>
+        <div class="col col-60"><input type="search" placeholder="Search"></div>
+        <div class="col col-20"><i class="icon ion-star"></i></div>
         </div>
-      </div>
-      <div class="col-10">
-        <i class="icon ion-star"></i>
-      </div>
-    </div>
-<!--底部-->
-    <div class="tabs tabs-icon-top">
-      <a class="tab-item">
-        <i class="icon ion-home"></i>
-        Home
-      </a>
-      <a class="tab-item">
-        <i class="icon ion-star"></i>
-        Favorites
-      </a>
-      <a class="tab-item">
-        <i class="icon ion-gear-a"></i>
-        Settings
-      </a>
-    </div>
-<!--中间-->
-    <div>
+    </ion-header-bar>
+
+
+    <ion-footer-bar class="bar-calm">
+        <a class="tab-item" href="index.html">
+            <i class="icon ion-home"></i>
+            Home
+        </a>
+        <a class="tab-item" href="mine.html">
+            <i class="icon ion-star"></i>
+            Favorites
+        </a>
+        <a class="tab-item" href="more.html">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+    </ion-footer-bar>
+    <ion-content>
+
+      <div>
       <div class="row">
         <div class="col"><img class="full-image" src="1.png">分类1</div>
         <div class="col"><img class="full-image" src="1.png">分类2</div>
@@ -64,18 +57,28 @@
 <!--中间-->
     <div>
       <a class="item item-icon-left" href="#">
-        新货推荐
-        <span class="badge badge-assertive">></span>
+      新货推荐
+      <span class="badge badge-assertive">></span>
       </a>
     </div>
 <!--中间-->
     <div class="row">
-      <div class="col"><img class="full-image" src="1.png">oo该片</div>
-      <div class="col"><img class="full-image" src="1.png">xx该片</div>
-      <div class="col"><img class="full-image" src="1.png">该片</div>
+      <div class="col"><img class="full-image" src="1.png">软骨</div>
+      <div class="col"><img class="full-image" src="1.png">隐形眼镜</div>
+      <div class="col"><img class="full-image" src="1.png">慢咽舒宁</div>
+    </div>
+    <div>
+      <a class="item item-icon-left" href="#">
+      限时折扣
+      <span class="badge badge-assertive">></span>
+      </a>
     </div>
 <!--中间-->
-<div></div>
-
-  </body>
+    <div class="row">
+      <div class="col"><img class="full-image" src="1.png">沐浴露</div>
+      <div class="col"><img class="full-image" src="1.png">维他命</div>
+      <div class="col"><img class="full-image" src="1.png">大保健</div>
+    </div>
+    </ion-content>
+</body>
 </html>
