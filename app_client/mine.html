@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head >
+    <meta charset="utf-8" http-equiv="content-type" content="text/html">
+    <title>我的</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="css/mobile/ionic.css" rel="stylesheet">
+
+  <script src="scripts/lib/ionic/angular/angular.js"></script>
+  <script src="scripts/hel.js"></script>
+
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+    <!-- ZXQ-04-12修改 -->
+<body ng-controller="TestFormModule">
+    <ion-content>
+      <img class="full-image" src="1.png">
+      <ion-item >我的购物车</ion-item>
+      <ion-item >我的订单</ion-item>
+      <ion-item >我的资料</ion-item>
+      <ion-item >我的收藏</ion-item>
+      <ion-item >收获地址管理</ion-item>
+
+
+      <div class="list">
+        <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">邮箱</span>
+            <input name="userName" type="text" ng-model="user.userName" placeholder="First Name" required/>
+          </label>
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">密码</span>
+            <input name="password" type="password" ng-model="user.password" placeholder="password"required/>
+          </label>
+          <input class="button button-positive" type="submit" ng-disabled="myForm.$invalid"/>
+
+        </form>
+      </div>
+     
+    </ion-content>
+
+</body>
+</html>

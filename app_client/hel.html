@@ -1,0 +1,15 @@
+<html ng-app="appModule">
+<head>
+  ...
+  <script src="scripts/lib/ionic/angular/angular.js"></script>
+  <script src="scripts/hel.js"></script>
+</head>
+<body ng-controller="TestFormModule">
+
+  	<form name="myForm" ng-submit="save()" >
+              <input name="userName" type="text" ng-model="user.userName" required/>
+              <input name="password" type="password" ng-model="user.password" required/>
+              <input type="submit" ng-disabled="myForm.$invalid"/>
+  	</form>
+</body>
+</html>
