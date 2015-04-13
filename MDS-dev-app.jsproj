@@ -141,8 +141,6 @@
     <Content Include="fonts\ratchicons.woff" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
-    <Content Include="mine.html" />
-    <Content Include="more.html" />
     <Content Include="public_html\css\index.css" />
     <Content Include="public_html\css\mobile\ratchet-theme-android.css" />
     <Content Include="public_html\css\mobile\ratchet-theme-android.min.css" />
@@ -193,9 +191,12 @@
     <Content Include="scripts\lib\ionic\ionic.js" />
     <Content Include="scripts\lib\ionic\ionic.min.js" />
     <Content Include="scripts\tools.js" />
-    <Content Include="shop.html" />
     <Content Include="views\app\base.html" />
-    <Content Include="yao.html" />
+    <Content Include="views\app\index.html" />
+    <Content Include="views\app\mine.html" />
+    <Content Include="views\app\more.html" />
+    <Content Include="views\app\shop.html" />
+    <Content Include="views\app\yao.html" />
     <Folder Include="img\phones\" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
@@ -215,7 +216,6 @@
     <Content Include="config.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="index.html" />
     <Content Include="plugins\org.apache.cordova.geolocation\.fetch.json" />
     <Content Include="plugins\org.apache.cordova.geolocation\CONTRIBUTING.md" />
     <Content Include="plugins\org.apache.cordova.geolocation\doc\de\index.md" />
