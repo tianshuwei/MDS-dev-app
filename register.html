@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户注册</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+<body ng-app="todo">
+
+    <div class="bar bar-header bar-light">
+        <h1 class="title">用户注册</h1>
+    </div>
+    <div class="content has-header">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">用户名</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">密码</span>
+                <input type="password">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-calm">
+                立即注册
+            </button>
+        </div>
+    </div>
+</body>
+</html>
