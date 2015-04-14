@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+
+    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+    <link href="../../css/app.css" rel="stylesheet">
+
+    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="../../scripts/app.js"></script>
+
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+    <!-- ZXQ-04-12修改 -->
+<body ng-app="todo">
+    <ion-header-bar class="bar-calm">
+        <h1 class="title">我的订单</h1>
+    </ion-header-bar>
+
+    <ion-footer-bar class="bar-calm">
+        <a class="tab-item">
+          <i class="icon ion-home"></i>
+          Home
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-star"></i>
+          Favorites
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-gear-a"></i>
+          Settings
+        </a>
+    </ion-footer-bar>
+    <ion-content>
+
+
+
+        <div class="tabbable">
+            <ul class="nav nav-tabs text-center">
+              <li class="active" style="width:20%"><a href="#1" data-toggle="tab">待付款</a></li>
+              <li style="width:20%"><a href="#2" data-toggle="tab">待收货</a></li>
+              <li style="width:20%"><a href="#3" data-toggle="tab">待评论</a></li>
+              <li style="width:20%"><a href="#4" data-toggle="tab">已完成</a></li>
+              <li style="width:20%"><a href="#5" data-toggle="tab">退货中</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="1">
+                <ul class="list">
+                    <li class="item item-toggle">
+                       <i class="icon ion-reply"></i>
+                       菊之药
+                       <label class="toggle toggle-positive">
+                         订单号：5214568
+                       </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item">
+                    待付款
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             联系卖家
+                            </button>
+                        </label>
+                        <label class="btn">
+                            <button class="button button-small button-light">
+                             取消订单
+                            </button>
+                        </label>
+                        <label class="btn">
+                            <button class="button button-small button-positive">
+                             付款
+                            </button>
+                        </label>
+                    </li>
+                </ul>
+                </div>
+                <div class="tab-pane" id="2">
+                <ul class="list">
+                    <li class="item item-toggle">
+                       <i class="icon ion-reply"></i>
+                       菊之药
+                       <label class="toggle toggle-positive">
+                         订单号：5214568
+                       </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item">
+                    待收货
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             查看物流
+                            </button>
+                        </label>
+                        <label class="btn">
+                            <button class="button button-small button-light">
+                             退款
+                            </button>
+                        </label>
+                        <label class="btn">
+                            <button class="button button-small button-positive">
+                             确认收货
+                            </button>
+                        </label>
+                    </li>
+                </ul>
+                </div>
+                <div class="tab-pane" id="3">
+                <ul class="list">
+                    <li class="item item-toggle">
+                       <i class="icon ion-reply"></i>
+                       菊之药
+                       <label class="toggle toggle-positive">
+                         订单号：5214568
+                       </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item">
+                    待评论
+                        <label class="btn">
+                            <button class="button button-small button-light">
+                             删除订单
+                            </button>
+                        </label>
+                        <label class="btn">
+                            <button class="button button-small button-positive">
+                             评价订单
+                            </button>
+                        </label>
+                    </li>
+                </ul>
+                </div>
+                <div class="tab-pane" id="4">
+                <ul class="list">
+                    <li class="item item-toggle">
+                       <i class="icon ion-reply"></i>
+                       菊之药
+                       <label class="toggle toggle-positive">
+                         订单号：5214568
+                       </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item">
+                    已完成>
+                        <label class="btn">
+                            <button class="button button-small button-light">
+                             删除订单
+                            </button>
+                        </label>
+                    </li>
+                </ul>
+                </div>
+                <div class="tab-pane" id="5">
+                <ul class="list">
+                    <li class="item item-toggle">
+                       <i class="icon ion-reply"></i>
+                       菊之药
+                       <label class="toggle toggle-positive">
+                         订单号：5214568
+                       </label>
+                    </li>
+                    <li class="item item-cart">
+                       <img src="1.png">
+                       <h2>xxxx</h2>
+                       <p>price $22</p>
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             删除
+                            </button>
+                    </label>
+                    </li>
+                    <li class="item">
+                    退货中
+                       <label class="btn">
+                            <button class="button button-small button-light">
+                             退货中
+                            </button>
+                        </label>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</body>
+</html>
+
