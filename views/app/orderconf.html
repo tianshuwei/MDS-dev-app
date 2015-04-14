@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
+<head>
         <meta charset="utf-8">
-    <title>我的购物车</title>
+    <title>订单确认</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="../../css/mobile/ionic.css" rel="stylesheet">
@@ -16,29 +17,23 @@
     <script src="../../cordova.js"></script>
     </head>
 <body ng-app="todo">
-    <ion-header-bar class="bar-calm">
+	<ion-header-bar class="bar-calm">
         <div class="row">
-            <div class="col col-20"><i class="icon ion-briefcase"></i></div>
-            <div class="col col-30">我的购物车</div>
+            <div class="col col-10"><i class="icon ion-chevron-left"></i></div>
+            <div class="col col-30">订单确认</div>
         </div>
     </ion-header-bar>
-
     <ion-footer-bar class="bar-calm">
-        <a class="tab-item" href="index.html">
-            <i class="icon ion-home"></i>
-            Home
-        </a>
-        <a class="tab-item" href="mine.html">
-            <i class="icon ion-star"></i>
-            Favorites
-        </a>
-        <a class="tab-item" href="more.html">
-            <i class="icon ion-gear-a"></i>
-            Settings
-        </a>
+          
     </ion-footer-bar>
-    <ion-content>
-        <ul class="list">
+<ion-content>
+    <div class="list">
+        <a class="item item-icon-left item-icon-right" href="#">
+          <i class="icon ion-ios-location"></i>
+          <p> 收货人：陈呵    13122392221</p>
+          <p> 收货地址：华东理工大学</p>
+          <i class="icon ion-chevron-right"></i>
+        </a>
 
         <li class="item item-toggle">
            <i class="icon ion-reply"></i>
@@ -69,16 +64,23 @@
                 </button>
         </label>
         </li>
-        
-        <li class="item item-toggle">
-           <h2>共6件商品邮费：￥0总计：￥55</h2>
-           <label class="toggle toggle-calm">
-                <button class="button button-small button-calm">
-                 结算
-                </button>
-        </label>
-        </li>
-      </ul>
-    </ion-content>
+
+        <a class="item item-icon-left item-icon-right" href="#">
+        <div style="float:left">
+          <br>收货人：陈呵    13122392221
+          <br> 收货地址：华东理工大学
+          </div>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+
+        <div class="item">
+         <a>给卖家留言:</a>
+         <div style="float:right">
+         <br>共6件商品 总计：￥551.0
+         </div>
+        </div>
+
+      </div>
+  </ion-content>
 </body>
 </html>
