@@ -159,7 +159,15 @@
     <Content Include="scripts\lib\ionic\ionic.js" />
     <Content Include="scripts\lib\ionic\ionic.min.js" />
     <Content Include="scripts\tools.js" />
+    <Content Include="views\app\1.png" />
     <Content Include="views\app\base.html" />
+    <Content Include="views\app\index.html" />
+    <Content Include="views\app\mine.html" />
+    <Content Include="views\app\more.html" />
+    <Content Include="views\app\my_shop_cart.html" />
+    <Content Include="views\app\register.html" />
+    <Content Include="views\app\shop.html" />
+    <Content Include="views\app\yao.html" />
     <Folder Include="img\phones\" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />

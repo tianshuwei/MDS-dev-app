@@ -1,1 +1,21 @@
-﻿
+﻿.item-cart{
+padding-left: 106px;
+min-height: 50px;
+}
+
+.item-cart img{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width:60px;
+  height:60px;
+}
+.item-cart .btn{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  z-index: 3;
+  margin-top: 15px;
+}
+
+

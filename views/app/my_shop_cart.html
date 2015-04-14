@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>我的购物车</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+    <link href="../../css/app.css" rel="stylesheet">
+
+
+    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="../../scripts/app.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="../../cordova.js"></script>
+    </head>
+<body ng-app="todo">
+    <ion-header-bar class="bar-calm">
+        <div class="row">
+            <div class="col col-20"><i class="icon ion-briefcase"></i></div>
+            <div class="col col-30">我的购物车</div>
+        </div>
+    </ion-header-bar>
+
+    <ion-footer-bar class="bar-calm">
+        <a class="tab-item" href="index.html">
+            <i class="icon ion-home"></i>
+            Home
+        </a>
+        <a class="tab-item" href="mine.html">
+            <i class="icon ion-star"></i>
+            Favorites
+        </a>
+        <a class="tab-item" href="more.html">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+    </ion-footer-bar>
+    <ion-content>
+        <ul class="list">
+
+        <li class="item item-toggle">
+           <i class="icon ion-reply"></i>
+           菊之药
+           <label class="toggle toggle-positive">
+             订单号：5214568
+             </div>
+           </label>
+        </li>
+
+        <li class="item item-cart">
+           <img src="1.png">
+           <h2>xxxx</h2>
+           <p>price $22</p>
+           <label class="btn">
+                <button class="button button-small button-light">
+                 删除
+                </button>
+        </label>
+        </li>
+
+        <li class="item item-cart">
+           <img src="1.png">
+           <h2>xxxx</h2>
+           <p>price $22</p>
+           <label class="btn">
+                <button class="button button-small button-light">
+                 删除
+                </button>
+        </label>
+        </li>
+        
+        <li class="item item-toggle">
+           <h2>共6件商品邮费：￥0总计：￥55</h2>
+           <label class="toggle toggle-calm">
+                <button class="button button-small button-calm">
+                 结算
+                </button>
+        </label>
+        </li>
+      </ul>
+    </ion-content>
+</body>
+</html>
