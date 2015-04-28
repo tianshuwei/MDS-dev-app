@@ -161,7 +161,6 @@
     <Content Include="scripts\tools.js" />
     <Content Include="views\app\1.png" />
     <Content Include="views\app\base.html" />
-    <Content Include="views\app\index.html" />
     <Content Include="views\app\mine.html" />
     <Content Include="views\app\more.html" />
     <Content Include="views\app\my_shop_cart.html" />

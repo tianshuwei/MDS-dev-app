@@ -18,6 +18,7 @@
     </ion-header-bar>
     <ion-content>
         <div class="list">
+        <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
             <label class="item item-input">
                 <span class="input-label">用户名</span>
                 <input type="text">
@@ -27,6 +28,7 @@
                 <input type="password">
             </label>
         </div>
+        </form>
         <div class="padding">
             <button class="button button-block button-calm">
                 立即注册

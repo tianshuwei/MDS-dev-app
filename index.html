@@ -5,13 +5,13 @@
     <title>首页</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+    <link href="css/mobile/ionic.css" rel="stylesheet">
 
-    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
-    <script src="../../scripts/app.js"></script>
+    <script src="scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="scripts/app.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
-    <script src="../../cordova.js"></script>
+    <script src="cordova.js"></script>
 </head>
 <!-- ZXQ-04-12修改 -->
 <body ng-app="todo">
@@ -30,23 +30,23 @@
 
     <ion-footer-bar class="bar-calm">
         <a class="tab-item">
-          <i class="icon ion-home"></i>
+            <i class="icon ion-home" href="index.html"></i>
           Home
         </a>
-        <a class="tab-item" href="mine.html">
-          <i class="icon ion-star"></i>
-          Favorites
+        <a class="tab-item" href="/views/app/mine.html">
+            <i class="icon ion-star"></i>
+            Favorites
         </a>
-        <a class="tab-item" href="more.html">
-          <i class="icon ion-gear-a"></i>
-          Settings
+        <a class="tab-item" href="/views/app/more.html">
+            <i class="icon ion-gear-a"></i>
+            Settings
         </a>
     </ion-footer-bar>
     <ion-content>
 
       <div>
       <div class="row">
-        <div class="col"><a href="shop.html"><img class="full-image" src="1.png">分类1</a></div>
+        <div class="col"><a href="/views/app/shop.html"><img class="full-image" src="1.png">分类1</a></div>
         <div class="col"><img class="full-image" src="1.png">分类2</div>
         <div class="col"><img class="full-image" src="1.png">分类3</div>
         <div class="col"><img class="full-image" src="1.png">分类4</div>
