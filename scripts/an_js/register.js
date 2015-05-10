@@ -1,8 +1,8 @@
-var host_add="http://localhost:8000"
+var host_add="http://localhost/Helloworld"
 
 
 function url(add){
-	return host_add+add;
+    return host_add+add;
 }
 
 // var phonecatApp = angular.module('phonecatApp', []);
@@ -51,63 +51,28 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
     return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
     }];
 });
+
 appModule.controller('TestFormModule', function($scope, $http){
     $scope.user={
-        userName:'damoqiongqiu',
-        password:'abc'
+        userName:'',
+        loginPassword:'',
+        usertype:'commonuser'
     };
-    // $scope.processForm = function() {
-    // $http({
-    //     method  : 'POST',
-    //     url     : 'login',
-    //     data    : JSON.stringify($scope.user),  // pass in data as strings
-    //     headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-    // })
-    //     .success(function(data) {
-    //         console.log(data);
- 
-    //         if (!data.success) {
-    //             // if not successful, bind errors to error variables
-    //             $scope.errorName = data.errors.name;
-    //             $scope.errorSuperhero = data.errors.superheroAlias;
-    //         } else {
-    //             // if successful, bind success message to message
-    //             $scope.message = data.message;
-    //         }
-    //     });
+
     $scope.save=function(){
-        $http.post( url('/msg'),$scope.user).success(
+        $http.post( url('/Register'),$scope.user).success(
                     function(data) {
             console.log(data);
  
-            if (!data.success) {
+            if (!data.ok) {
                 // if not successful, bind errors to error variables
-                $scope.errorName = data.errors.name;
-                $scope.errorSuperhero = data.errors.superheroAlias;
+                $scope.errorName = data.reason;
+                $scope.message = data;
+                //$scope.errorSuperhero = data.errors.superheroAlias;
             } 
             else {
                 // if successful, bind success message to message
-                $scope.message = data.name;
+                $scope.message = data;
             }});
     };
-    //     $http({
-    //     method  : 'POST',
-    //     url     : url('/msg'),
-    //     data    : $scope.user,//JSON.stringify($scope.user),  // pass in data as strings
-    //     headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-    // })
-    //     .success(function(data) {
-    //         console.log(data);
- 
-    //         if (!data.success) {
-    //             // if not successful, bind errors to error variables
-    //             $scope.errorName = data.errors.name;
-    //             $scope.errorSuperhero = data.errors.superheroAlias;
-    //         } 
-    //         else {
-    //             // if successful, bind success message to message
-    //             $scope.message = data.message;
-    //         }});
-    // }
-
-    });
+});

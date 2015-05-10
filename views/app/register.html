@@ -8,11 +8,11 @@
     <link href="../../css/mobile/ionic.css" rel="stylesheet">
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
-
+    <script src="../../scripts/an_js/register.js"></script>
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
 </head>
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-header-bar class="bar bar-header bar-light">
        <h1 class="title">用户注册</h1>
     </ion-header-bar>
@@ -21,16 +21,22 @@
         <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
             <label class="item item-input">
                 <span class="input-label">用户名</span>
-                <input type="text">
+                <input type="text" ng-model="user.userName" placeholder="请输入用户名" required />
             </label>
             <label class="item item-input">
                 <span class="input-label">密码</span>
-                <input type="password">
+                <input type="password" ng-model="user.loginPassword" placeholder="请输入密码" required/>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">用户类型</span>
+                <input type="text" ng-model="user.usertype" placeholder="storemanager或者commonuser" required/>
+                <!-- <input type="radio" ng-model="user.usertype" checked="{{user.uesrtype=='commonuser'}}" name="usertype" value="commonuser"/>
+                <input type="radio" ng-model="user.usertype" checked="{{user.uesrtype=='storemanager'}}" name="usertype" value="storemanager"/> -->
             </label>
         </div>
         </form>
-        <div class="padding">
-            <button class="button button-block button-calm">
+        <div class="padding" >
+            <button class="button button-block button-calm" ng-click="save()">
                 立即注册
             </button>
         </div>

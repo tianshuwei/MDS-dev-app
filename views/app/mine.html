@@ -35,7 +35,8 @@
 
           <label class="item item-input item-floating-label">
             <span class="input-label">密码</span>
-            <input name="password" type="password" ng-model="user.password" placeholder="password"required/>
+            <span style="color:red" ng-show="message.ok==0">帐号密码输入错误</span>
+            <input name="password" type="password" ng-model="user.loginPassword" placeholder="password"required/>
           </label>
           <input class="button button-positive" type="submit" ng-disabled="myForm.$invalid"/>
 

@@ -1,4 +1,4 @@
-var host_add="http://localhost:8000"
+var host_add="http://localhost/Helloworld"
 
 
 function url(add){
@@ -53,8 +53,8 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 });
 appModule.controller('TestFormModule', function($scope, $http){
     $scope.user={
-        userName:'damoqiongqiu',
-        password:'abc'
+        userName:'lgd',
+        loginPassword:'444444'
     };
     // $scope.processForm = function() {
     // $http({
@@ -76,18 +76,19 @@ appModule.controller('TestFormModule', function($scope, $http){
     //         }
     //     });
     $scope.save=function(){
-        $http.post( url('/msg'),$scope.user).success(
+        $http.post( url('/Login'),$scope.user).success(
                     function(data) {
             console.log(data);
  
-            if (!data.success) {
+            if (!data.ok) {
                 // if not successful, bind errors to error variables
-                $scope.errorName = data.errors.name;
-                $scope.errorSuperhero = data.errors.superheroAlias;
+                $scope.errorName = data.reason;
+                $scope.message = data;
+                //$scope.errorSuperhero = data.errors.superheroAlias;
             } 
             else {
                 // if successful, bind success message to message
-                $scope.message = data.name;
+                $scope.message = data;
             }});
     };
     //     $http({
