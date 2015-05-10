@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,8 @@
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
+    <script src="../../scripts/an_js/yao.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
@@ -39,7 +41,7 @@
 
     <ion-content>
 
-        <div class="list card">
+        <!--<div class="list card">
           <div class="item item-image">
             <img src="1.png" height="170">
           </div>
@@ -51,38 +53,53 @@
             <div class="col col-50">500盒</div>
             <div class="col col-50"><button class="button button-light">加入购物车</button></div>
             </div>
-          </div>
+          </div>-->
+        <div class="list card" ng-controller="">
+            <div ng-repeat="item in phones">
+                <div class="item item-image">
+                    <img src={{item.shopname}} +" .png" height="170">
+                </div>
+                <div ng-repeat="item in phones">
+                    {{item.yaoname}}<br>
+                    {{item.function}}<br>
+                </div>
+                <div class="row" ng-repeat="item in phones">
+                    <div class="col col-50">{{item.number}}盒</div>
+                    <div class="col col-50"><button class="button button-light">加入购物车</button></div>
+                </div>
+            </div>
+        </div>
           
 
-          <div class="tabbable">
+        <div class="tabbable" ng-controller="">
             <ul class="nav nav-tabs text-center">
-              <li class="active" style="width:50%"><a href="#1" data-toggle="tab">产品详情</a></li>
-              <li style="width:50%"><a href="#2" data-toggle="tab">用户评论</a></li>
+                <li class="active" style="width:50%"><a href="#1" data-toggle="tab">产品详情</a></li>
+                <li style="width:50%"><a href="#2" data-toggle="tab">用户评论</a></li>
             </ul>
             <div class="tab-content">
-              <div class="tab-pane active" id="1">
-              
-              <p>999牌 感冒灵颗粒 10g*9包 说明书</p><p>请仔细阅读说明书并按说明使用或在药师指导下购买和使用</p><p>通用名称 ：  感冒灵胶囊</p><p>汉语拼音 ：  Ganmaoling Jiaonang</p><p>商品名称 ：  999牌</p><p>成份 ： 岗梅、三叉苦、金盏银盘、野菊花、薄荷油、咖啡因、马来酸氯苯那敏、对乙酰氨基酚。辅料为滑石粉。</p><p>性状 ： 本品为胶囊剂，内容物为棕褐色的颗粒；味苦。</p><p>功能主治 ：  解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。</p><p>规格 ：  10g*9包/盒</p><p>用法用量 ： 开水冲服，一次10克（1袋），一日3次。</p><p>不良反应 ： 偶见皮疹、荨麻疹、药热及粒细胞减少；可见困倦、嗜睡、口渴、虚弱感；长期大量用药会导致肝肾功能异常。</p><p>禁忌 ：  严重肝肾功能不全者禁用。</p><p>注意事项 ： 1.忌烟、酒及辛辣、生冷、油腻食物。2.不宜在服药期间同时服用滋补性中成药。3.本品含对乙酰氨基酚、马来酸氯苯那敏、咖啡因。服用本品期间不得饮酒或含有酒精的饮料；不能同时服用与本品成份相似的其他抗感冒药；肝、肾功能不全者慎用；膀胱颈梗阻、甲状腺功能亢进、青光眼、高血压和前列腺肥大者慎用；孕妇及哺乳期妇女慎用；服药期间不得驾驶机、车、船、从事高空作业、机械作业及操作精密仪器。4.脾胃虚寒，症见腹痛、喜暖、泄泻者慎用。5.心脏病、糖尿病等慢性病严重者应在医师指导下服用。6.儿童、年老体弱者应在医师指导下服用。7.服药3天后症状无改善，或症状加重，或出现新的严重症状如胸闷、心悸等应立即停药，并去医院就诊。8.对本品过敏者禁用，过敏体质者慎用。9.本品性状发生改变时禁止使用。10.儿童必须在成人监护下使用。11.请将本品放在儿童不能接触的地方。12.如正在使用其他药品，使用本品前请咨询医师或药师。</p><p>药物相互作用 ： 1.与其他解热镇痛药并用，有增加肾毒性的危险。2.如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师</p><p>贮藏 ：  密封。</p><p>包装 ：  复合膜；每盒装9袋。</p><p>有效期 ：  24个月</p><p>批准文号 ： 国药准字Z44021940</p><p>企业名称 ：  三九医药股份有限公司</p>
-              
-              </div>
-              <div class="tab-pane" id="2">
-              
-                <a class="item item-thumbnail-left" href="#">
-                  <img src="#">
-                  <h2>5.0</h2>
-                  <p>是正品，好评</p>
-                  <p>2015-04-09</p>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                  <img src="#">
-                  <h2>5.0</h2>
-                  <p>预防感冒用的，有点甜</p>
-                  <p>2015-04-08</p>
-                </a>
+                <div class="tab-pane active" id="1">
 
-              </div>
+                    <p>999牌 感冒灵颗粒 10g*9包 说明书</p><p>请仔细阅读说明书并按说明使用或在药师指导下购买和使用</p><p>通用名称 ：  感冒灵胶囊</p><p>汉语拼音 ：  Ganmaoling Jiaonang</p><p>商品名称 ：  999牌</p><p>成份 ： 岗梅、三叉苦、金盏银盘、野菊花、薄荷油、咖啡因、马来酸氯苯那敏、对乙酰氨基酚。辅料为滑石粉。</p><p>性状 ： 本品为胶囊剂，内容物为棕褐色的颗粒；味苦。</p><p>功能主治 ：  解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。</p><p>规格 ：  10g*9包/盒</p><p>用法用量 ： 开水冲服，一次10克（1袋），一日3次。</p><p>不良反应 ： 偶见皮疹、荨麻疹、药热及粒细胞减少；可见困倦、嗜睡、口渴、虚弱感；长期大量用药会导致肝肾功能异常。</p><p>禁忌 ：  严重肝肾功能不全者禁用。</p><p>注意事项 ： 1.忌烟、酒及辛辣、生冷、油腻食物。2.不宜在服药期间同时服用滋补性中成药。3.本品含对乙酰氨基酚、马来酸氯苯那敏、咖啡因。服用本品期间不得饮酒或含有酒精的饮料；不能同时服用与本品成份相似的其他抗感冒药；肝、肾功能不全者慎用；膀胱颈梗阻、甲状腺功能亢进、青光眼、高血压和前列腺肥大者慎用；孕妇及哺乳期妇女慎用；服药期间不得驾驶机、车、船、从事高空作业、机械作业及操作精密仪器。4.脾胃虚寒，症见腹痛、喜暖、泄泻者慎用。5.心脏病、糖尿病等慢性病严重者应在医师指导下服用。6.儿童、年老体弱者应在医师指导下服用。7.服药3天后症状无改善，或症状加重，或出现新的严重症状如胸闷、心悸等应立即停药，并去医院就诊。8.对本品过敏者禁用，过敏体质者慎用。9.本品性状发生改变时禁止使用。10.儿童必须在成人监护下使用。11.请将本品放在儿童不能接触的地方。12.如正在使用其他药品，使用本品前请咨询医师或药师。</p><p>药物相互作用 ： 1.与其他解热镇痛药并用，有增加肾毒性的危险。2.如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师</p><p>贮藏 ：  密封。</p><p>包装 ：  复合膜；每盒装9袋。</p><p>有效期 ：  24个月</p><p>批准文号 ： 国药准字Z44021940</p><p>企业名称 ：  三九医药股份有限公司</p>
+
+                </div>
+                <div class="tab-pane" id="2">
+                    <div ng-repeat="item in phones">
+                        <a class="item item-thumbnail-left" href="#">
+                            <img src="#">
+                            <h2>{{item.star}}</h2>
+                            <p>{{item.content}}</p>
+                            <p>{{item.time}}</p>
+                        </a>
+                        <a class="item item-thumbnail-left" href="#">
+                            <img src="#">
+                            <h2>5.0</h2>
+                            <p>预防感冒用的，有点甜</p>
+                            <p>2015-04-08</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
 
 
 

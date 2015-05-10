@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <title>我的购物车</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
@@ -12,9 +12,12 @@
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
 
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
+    <script src="../../scripts/an_js/my_shop_cart.js"></script>
+
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
-    </head>
+</head>
 <body ng-app="todo">
     <ion-header-bar class="bar-calm">
         <div class="row">
@@ -37,48 +40,39 @@
             Settings
         </a>
     </ion-footer-bar>
-    <ion-content>
-        <ul class="list">
+    <ion-content ng-app>
+        <div ng-controller="">
+            <ul class="list">
 
-        <li class="item item-toggle">
-           <i class="icon ion-reply"></i>
-           菊之药
-           <label class="toggle toggle-positive">
-             订单号：5214568
-           </label>
-        </li>
+                <li class="item item-toggle" ng-repeat="item in phones">
+                    <i class="icon ion-reply"></i>
+                    {{item.shopname}}
+                    <label class="toggle toggle-positive">
+                        {{item.listnumber}}
+                    </label>
+                </li>
 
-        <li class="item item-cart">
-           <img src="1.png">
-           <h2>xxxx</h2>
-           <p>price $22</p>
-           <label class="btn">
-                <button class="button button-small button-light">
-                 删除
-                </button>
-        </label>
-        </li>
+                <li class="item item-cart" ng-repeat="item in phones">
+                    <img src="1.png">
+                    <h2>{{item.shopname}}</h2>
+                    <p>{{item.price}}</p>
+                    <label class="btn">
+                        <button class="button button-small button-light">
+                            删除
+                        </button>
+                    </label>
+                </li>
 
-        <li class="item item-cart">
-           <img src="1.png">
-           <h2>xxxx</h2>
-           <p>price $22</p>
-           <label class="btn">
-                <button class="button button-small button-light">
-                 删除
-                </button>
-        </label>
-        </li>
-        
-        <li class="item item-toggle">
-           <h2>共6件商品邮费：￥0总计：￥55</h2>
-           <label class="toggle toggle-calm">
-                <button class="button button-small button-calm">
-                 结算
-                </button>
-        </label>
-        </li>
-      </ul>
+                <li class="item item-toggle" ng-repeat="item in phones">
+                    <h2>共{{item.number}}件商品邮费：￥{{item.youfei}}总计：￥{{item.price}}</h2>
+                    <label class="toggle toggle-calm">
+                        <button class="button button-small button-calm">
+                            结算
+                        </button>
+                    </label>
+                </li>
+            </ul>
+        </div>
     </ion-content>
 </body>
 </html>
