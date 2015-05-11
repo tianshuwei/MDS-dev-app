@@ -50,7 +50,7 @@
         </div>
         <div class="list" ng-controller="ShopListCtrl">
             <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in data">
-                <img src="1.png">
+                <img src={{shop.name}}+".png">
                 <h2>{{shop.name}}</h2>
                 <p>1021评价<br>1000</p>
             </a>
