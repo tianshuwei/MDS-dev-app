@@ -14,14 +14,31 @@
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
 </head>
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-content>
       <img class="full-image" src="1.png">
       <ion-item><a href="my_shop_cart.html">我的购物车</a></ion-item>
       <ion-item ><a href="orderlist.html">我的订单</a></ion-item>
       <ion-item ><a href="null.html">我的资料</a></ion-item>
       <ion-item ><a href="null.html">我的收藏</a></ion-item>
-      <ion-item ><a href="null.html">收获地址管理</a></ion-item>     
+      <ion-item ><a href="null.html">收获地址管理</a></ion-item>  
+
+      <div class="list">
+        <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">邮箱</span>
+            <input name="userName" type="text" ng-model="user.userName" placeholder="First Name" required/>
+          </label>
+
+          <label class="item item-input item-floating-label">
+            <span class="input-label">密码</span>
+            <input name="password" type="password" ng-model="user.loginPassword" placeholder="password"required/>
+          </label>
+          <input class="button button-positive" type="submit" ng-disabled="myForm.$invalid"/>
+
+        </form>
+      </div>   
     </ion-content>
 </body>
 </html>
