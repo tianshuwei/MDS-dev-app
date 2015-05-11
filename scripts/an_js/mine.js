@@ -53,8 +53,8 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 });
 appModule.controller('TestFormModule', function($scope, $http){
     $scope.user={
-        userName:'wq6',
-        loginPassword:'wq4',
+        userName:'wx6',
+        loginPassword:'wx4',
         usertype:'commonuser'
     };
     // $scope.processForm = function() {
