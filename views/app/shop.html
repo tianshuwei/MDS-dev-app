@@ -19,10 +19,10 @@
 <body ng-app="appModule">
     <ion-header-bar class="bar-calm">
         <div class="row">
-        <div class="col col-10"><i class="icon ion-star"></i></div>
-        <div class="col col-70">全部药店</div>
-        <div class="col col-10"><i class="icon ion-ios-location"></i></div>
-        <div class="col col-10"><i class="icon ion-ios-search-strong"></i></div>
+            <div class="col col-10"><i class="icon ion-star"></i></div>
+            <div class="col col-70">全部药店</div>
+            <div class="col col-10"><i class="icon ion-ios-location"></i></div>
+            <div class="col col-10"><i class="icon ion-ios-search-strong"></i></div>
         </div>
     </ion-header-bar>
 
@@ -46,13 +46,13 @@
             <div class="col col-50">离我最近</div>
         </div>
         <div class="row ">
-                <div class="col-90">上海 奉献 华东理工大学</div>
-                <div class="col-10"><i class="icon ion-ios-loop-strong"></i></div>
-            </div>
+            <div class="col-90">上海 奉献 华东理工大学</div>
+            <div class="col-10"><i class="icon ion-ios-loop-strong"></i></div>
+        </div>
         <div class="list" ng-controller="ShopListCtrl">
             <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in data">
-                <img src="1.png">
-                <h2>{{shop.StoreName}}</h2>
+                <img src={{shop.name}}+".png">
+                <h2>{{shop.name}}</h2>
                 <p>1021评价<br>1000</p>
             </a>
         </div>
