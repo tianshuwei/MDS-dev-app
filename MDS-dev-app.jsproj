@@ -142,6 +142,7 @@
     <Content Include="hello.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="scripts\an_js\my_shop_cart.js" />
     <Content Include="scripts\lib\ionic\angular-ui\angular-ui-router.js" />
     <Content Include="scripts\lib\ionic\angular-ui\angular-ui-router.min.js" />
     <Content Include="scripts\lib\ionic\angular\angular-animate.js" />
