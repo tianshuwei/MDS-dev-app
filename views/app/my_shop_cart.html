@@ -10,15 +10,13 @@
 
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
-    <script src="../../scripts/app.js"></script>
-
     <script src="../../scripts/lib/ionic/angular/angular.js"></script>
     <script src="../../scripts/an_js/my_shop_cart.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
 </head>
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-header-bar class="bar-calm">
         <div class="row">
             <div class="col col-20"><i class="icon ion-briefcase"></i></div>
@@ -41,36 +39,36 @@
         </a>
     </ion-footer-bar>
     <ion-content ng-app>
-        <div ng-controller="">
-            <ul class="list">
+        <div ng-controller="todo">
+            <ul class="list" ng-repeat="cart_list_item in rec.data">
 
-                <li class="item item-toggle" ng-repeat="item in phones">
+                <li class="item item-toggle" ng-repeat="item in cart_list_item.Store">
                     <i class="icon ion-reply"></i>
-                    {{item.shopname}}
+                    {{item.StoreName}}
                     <label class="toggle toggle-positive">
                         {{item.listnumber}}
                     </label>
                 </li>
 
-                <li class="item item-cart" ng-repeat="item in phones">
+                <!--<li class="item item-cart" ng-repeat="item in cart_list_item.order">
                     <img src="1.png">
-                    <h2>{{item.shopname}}</h2>
+                    <h2>{{item.StoreName}}</h2>
                     <p>{{item.price}}</p>
                     <label class="btn">
                         <button class="button button-small button-light">
                             删除
                         </button>
                     </label>
-                </li>
+                </li>-->
 
-                <li class="item item-toggle" ng-repeat="item in phones">
+               <!-- <li class="item item-toggle" ng-repeat="item in cart_list_item.total">
                     <h2>共{{item.number}}件商品邮费：￥{{item.youfei}}总计：￥{{item.price}}</h2>
                     <label class="toggle toggle-calm">
                         <button class="button button-small button-calm">
                             结算
                         </button>
                     </label>
-                </li>
+                </li>-->
             </ul>
         </div>
     </ion-content>

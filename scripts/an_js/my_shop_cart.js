@@ -46,5 +46,4 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 
 appModule.controller('ShopListCtrl', function ($scope, $http) {
 	$http.post(url(),{data:encodeURIComponent(JSON.stringify($scope.data))})
-	});
 });

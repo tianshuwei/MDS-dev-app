@@ -10,7 +10,6 @@
     <link href="../../css/app.css" rel="stylesheet">
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
-    <script src="../../scripts/app.js"></script>
     <script src="../../scripts/lib/ionic/angular/angular.js"></script>
     <script src="../../scripts/an_js/orderlist.js"></script>
 
@@ -23,7 +22,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-header-bar class="bar-calm">
         <h1 class="title">我的订单</h1>
     </ion-header-bar>
@@ -56,8 +55,7 @@
 
                 <!--#1-->
                 <div class="tab-pane active" id="1" ng-controller="todo">
-                <ul class="list">
-                  <div  ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
+                <ul class="list" ng-repeat="shop in rec.data">
                     <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
                         {{shop.name}}
@@ -65,7 +63,7 @@
                         {{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in res.data.shoplistmedicine"><!--shoplistmedicine???-->
+                    <li class="item item-cart" ng-repeat="item in rec.data">
                        <img src="1.png">
                        <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
@@ -93,7 +91,6 @@
                             </button>
                         </label>
                     </li>
-                    </div>
                 </ul>
                 </div>
 
