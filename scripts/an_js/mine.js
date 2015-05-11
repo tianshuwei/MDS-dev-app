@@ -53,8 +53,8 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 });
 appModule.controller('TestFormModule', function($scope, $http){
     $scope.user={
-        userName:'wx6',
-        loginPassword:'wx4',
+        userName:'wq121',
+        loginPassword:'wq121',
         usertype:'commonuser'
     };
     // $scope.processForm = function() {
@@ -89,7 +89,9 @@ appModule.controller('TestFormModule', function($scope, $http){
             } 
             else {
                 // if successful, bind success message to message
-                $scope.message = data;
+                $scope.rec = data;
+                alert("登录成功！"); 
+                window.location.href='../../index.html'; 
             }});
     };
     //     $http({

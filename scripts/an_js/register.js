@@ -1,4 +1,4 @@
-var host_add="http://localhost/Helloworld"
+var host_add="http://localhost/DrugOnline"
 
 
 function url(add){
@@ -68,11 +68,14 @@ appModule.controller('TestFormModule', function($scope, $http){
                 // if not successful, bind errors to error variables
                 $scope.errorName = data.reason;
                 $scope.message = data;
+                alert("注册失败！");
                 //$scope.errorSuperhero = data.errors.superheroAlias;
             } 
             else {
                 // if successful, bind success message to message
-                $scope.message = data;
+                $scope.rec = data;
+                alert("注册成功！"); 
+                window.location.href='mine.html'; 
             }});
     };
 });

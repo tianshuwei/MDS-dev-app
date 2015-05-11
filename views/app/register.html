@@ -33,12 +33,13 @@
                 <!-- <input type="radio" ng-model="user.usertype" checked="{{user.uesrtype=='commonuser'}}" name="usertype" value="commonuser"/>
                 <input type="radio" ng-model="user.usertype" checked="{{user.uesrtype=='storemanager'}}" name="usertype" value="storemanager"/> -->
             </label>
-        </div>
-        </form>
+        
         <div class="padding" >
-            <button class="button button-block button-calm" ng-click="save()">
+            <button class="button button-block button-calm" type="submit" ng-disabled="myForm.$invalid">
                 立即注册
             </button>
+        </div>
+        </form>
         </div>
     </ion-content>
 </body>
