@@ -1,4 +1,4 @@
-var host_add="http://localhost/Helloworld"
+var host_add="http://localhost/DrugOnline"
 
 
 function url(add){
@@ -53,8 +53,9 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 });
 appModule.controller('TestFormModule', function($scope, $http){
     $scope.user={
-        userName:'lgd',
-        loginPassword:'444444'
+        userName:'wq6',
+        loginPassword:'wq4',
+        usertype:'commonuser'
     };
     // $scope.processForm = function() {
     // $http({
