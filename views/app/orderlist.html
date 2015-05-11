@@ -12,7 +12,7 @@
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
     <script src="../../scripts/lib/ionic/angular/angular.js"></script>
-    <script src="../../scripts/an_js/mine.js"></script>
+    <script src="../../scripts/an_js/orderlist.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -55,18 +55,19 @@
             <div class="tab-content">
 
                 <!--#1-->
-                <div class="tab-pane active" id="1" ng-controller="PhoneListCtrl">
+                <div class="tab-pane active" id="1" ng-controller="todo">
                 <ul class="list">
-                    <li class="item item-toggle" ng-repeat="item in phones">
+                  <div  ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
+                    <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
-                        {{item.name}}
+                        {{shop.name}}
                        <label class="toggle toggle-positive">
-                        {{item.number}}
+                        {{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in phones">
+                    <li class="item item-cart" ng-repeat="item in res.data.shoplistmedicine"><!--shoplistmedicine???-->
                        <img src="1.png">
-                       <h2>{{phone.medicine_name}}</h2>
+                       <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
                        <label class="btn">
                             <button class="button button-small button-light">
@@ -74,7 +75,7 @@
                             </button>
                     </label>
                     </li>
-                    <li class="item" ng-repeat="item in phones">
+                    <li class="item">
                     待付款
                        <label class="btn">
                             <button class="button button-small button-light">
@@ -92,21 +93,22 @@
                             </button>
                         </label>
                     </li>
+                    </div>
                 </ul>
                 </div>
 
                 <!--#2-->
-                <div class="tab-pane" id="2" ng-controller="PhoneListCtrl">
+                <div class="tab-pane" id="2" ng-controller="todo">
                 <ul class="list">
-                    <li class="item item-toggle" ng-repeat="item in phones">
+                  <div  ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
+                    <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
-                       {{item.name}}
+                       {{shop.name}}
                        <label class="toggle toggle-positive">
-                         订单号：{{item.number}}
+                         订单号：{{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in phones">
-                       <img src="1.png">
+                    <li class="item item-cart" ng-repeat="item res.data.shoplist"><!--shoplist???-->
                        <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
                        <label class="btn">
@@ -115,7 +117,7 @@
                             </button>
                     </label>
                     </li>
-                    <li class="item" ng-repeat="item in phones">
+                    <li class="item">
                     待收货
                        <label class="btn">
                             <button class="button button-small button-light">
@@ -133,20 +135,22 @@
                             </button>
                         </label>
                     </li>
+                  </div>
                 </ul>
                 </div>
 
                 <!--#3-->
-                <div class="tab-pane" id="3" ng-controller="PhoneListCtrl">
+                <div class="tab-pane" id="3" ng-controller="todo">
                 <ul class="list">
+                  <div ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
                     <li class="item item-toggle" ng-repeat="item in phones">
                        <i class="icon ion-reply"></i>
-                       {{item.name}}
+                       {{shop.name}}
                        <label class="toggle toggle-positive">
-                         订单号：{{item.number}}
+                         订单号：{{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in phones">
+                    <li class="item item-cart" ng-repeat="item in res.data.shoplist"><!--shoplist???-->
                        <img src="1.png">
                        <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
@@ -169,18 +173,22 @@
                             </button>
                         </label>
                     </li>
+                  </div>
                 </ul>
                 </div>
-                <div class="tab-pane" id="4" ng-controller="PhoneListCtrl">
+
+                <!--#4-->
+                <div class="tab-pane" id="4" ng-controller="todo">
                 <ul class="list">
-                    <li class="item item-toggle" ng-repeat="item in phones">
+                  <div ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
+                    <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
-                       {{item.name}}
+                       {{shop.name}}
                        <label class="toggle toggle-positive">
-                         订单号：{{item.number}}
+                         订单号：{{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in phones">
+                    <li class="item item-cart" ng-repeat="item in res.data.shoplist"><!--shoplist???-->
                        <img src="1.png">
                        <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
@@ -190,7 +198,7 @@
                             </button>
                     </label>
                     </li>
-                    <li class="item" ng-repeat="item in phones">
+                    <li class="item">
                     已完成>
                         <label class="btn">
                             <button class="button button-small button-light">
@@ -198,23 +206,25 @@
                             </button>
                         </label>
                     </li>
+                  </div>
                 </ul>
                 </div>
 
-                <!--#5故意留着没改，给你看下样例-->
-                <div class="tab-pane" id="5">
+                <!--#5-->
+                <div class="tab-pane" id="5" ng-controller="todo">
                 <ul class="list">
+                  <div ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
                     <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
-                       菊之药
+                       {{shop.name}}
                        <label class="toggle toggle-positive">
-                         订单号：5214568
+                         订单号：{{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart">
+                    <li class="item item-cart" ng-repeat="item in res.data.shoplist"><!--shoplist???-->
                        <img src="1.png">
-                       <h2>xxxx</h2>
-                       <p>price $22</p>
+                       <h2>{{item.name}}</h2>
+                       <p>price ￥{{item.name}}/p>
                        <label class="btn">
                             <button class="button button-small button-light">
                              删除
@@ -229,8 +239,11 @@
                             </button>
                         </label>
                     </li>
+                  </div>
                 </ul>
                 </div>
+
+
             </div>
         </div>
 
