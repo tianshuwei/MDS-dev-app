@@ -51,5 +51,6 @@ appModule.controller('ShopListCtrl', function ($scope, $http) {
     };
 	$http.get(url("/ShowDrugstoreServlet"+"?longitude="+$scope.address.longitude+"&&latitude="+$scope.address.latitude+"&page=1")).success(function(data) {
 	$scope.rec = data;
+  if(!$scope.$$phase) $scope.$apply();
 	});
 });

@@ -10,6 +10,7 @@
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
     <script src="../../scripts/an_js/shop.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
@@ -50,10 +51,10 @@
             <div class="col-10"><i class="icon ion-ios-loop-strong"></i></div>
         </div>
         <div class="list" ng-controller="ShopListCtrl">
-            <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in data">
-                <img src={{shop.StoreName}}+".png">
+            <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in rec.data">
+                <img src="{{shop.StorePic}}">
                 <h2>{{shop.StoreName}}</h2>
-                <p>1021评价<br>1000</p>
+                <p>热线:{{shop.ServiceHotline}}</p>
             </a>
         </div>
 
