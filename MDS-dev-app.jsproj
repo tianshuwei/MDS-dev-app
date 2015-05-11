@@ -165,6 +165,7 @@
     <Content Include="views\app\more.html" />
     <Content Include="views\app\my_shop_cart.html" />
     <Content Include="views\app\orderconf.html" />
+    <Content Include="views\app\orderconfer.html" />
     <Content Include="views\app\orderlist.html" />
     <Content Include="views\app\register.html" />
     <Content Include="views\app\shop.html" />

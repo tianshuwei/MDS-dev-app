@@ -7,43 +7,21 @@
 
     <link href="../../css/mobile/ionic.css" rel="stylesheet">
 
-    <script src="../../scripts/lib/ionic/angular/angular.min.js"></script>
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
     <script src="../../scripts/an_js/mine.js"></script>
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
 </head>
-    <!-- ZXQ-04-12修改 -->
-<body ng-app="appModule">
+<body ng-app="todo">
     <ion-content>
       <img class="full-image" src="1.png">
-      <ion-item>我的购物车</ion-item>
-      <ion-item >我的订单</ion-item>
-      <ion-item >我的资料</ion-item>
-      <ion-item >我的收藏</ion-item>
-      <ion-item >收获地址管理</ion-item>
-
-
-      <div class="list">
-        <form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
-
-          <label class="item item-input item-floating-label">
-            <span class="input-label">邮箱</span>
-            <input name="userName" type="text" ng-model="user.userName" placeholder="First Name" required/>
-          </label>
-
-          <label class="item item-input item-floating-label">
-            <span class="input-label">密码</span>
-            <span style="color:red" ng-show="message.ok==0">帐号密码输入错误</span>
-            <input name="password" type="password" ng-model="user.loginPassword" placeholder="password"required/>
-          </label>
-          <input class="button button-positive" type="submit" ng-disabled="myForm.$invalid"/>
-
-        </form>
-      </div>
-     
+      <ion-item><a href="my_shop_cart.html">我的购物车</a></ion-item>
+      <ion-item ><a href="orderlist.html">我的订单</a></ion-item>
+      <ion-item ><a href="null.html">我的资料</a></ion-item>
+      <ion-item ><a href="null.html">我的收藏</a></ion-item>
+      <ion-item ><a href="null.html">收获地址管理</a></ion-item>     
     </ion-content>
-    <script src="FormBasic.js"></script>
 </body>
 </html>
