@@ -10,16 +10,13 @@
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/app.js"></script>
-
-    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
     <script src="../../scripts/an_js/shop.js"></script>
-
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
 </head>
     <!-- ZXQ-04-12修改 -->
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-header-bar class="bar-calm">
         <div class="row">
             <div class="col col-10"><i class="icon ion-star"></i></div>
@@ -28,6 +25,7 @@
             <div class="col col-10"><i class="icon ion-ios-search-strong"></i></div>
         </div>
     </ion-header-bar>
+
     <ion-footer-bar class="bar-calm">
         <a class="tab-item" href="../../index.html">
             <i class="icon ion-home"></i>
@@ -52,12 +50,13 @@
             <div class="col-10"><i class="icon ion-ios-loop-strong"></i></div>
         </div>
         <div class="list" ng-controller="ShopListCtrl">
-            <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in res.data.shops">
-                <img src="1.png">
-                <h2>{{shop.StoreName}}</h2>
+            <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in data">
+                <img src={{shop.name}}+".png">
+                <h2>{{shop.name}}</h2>
                 <p>1021评价<br>1000</p>
             </a>
         </div>
+
     </ion-content>
 </body>
 </html>

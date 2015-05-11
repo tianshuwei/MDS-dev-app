@@ -1,4 +1,4 @@
-var host_add="http://localhost/Helloworld"
+var host_add="http://localhost/DrugOnline"
 
 
 function url(add){
@@ -49,7 +49,7 @@ appModule.controller('ShopListCtrl', function ($scope, $http) {
         longitude:'121.0',
         latitude:'30.0'
     };
-	$http.post(url("/ShopList"+"?longitude=")).success(function(data) {
-	$scope.data = data;
+	$http.get(url("/ShowDrugstoreServlet"+"?longitude="+$scope.address.longitude+"&&latitude="+$scope.address.latitude+"&page=1")).success(function(data) {
+	$scope.rec = data;
 	});
 });
