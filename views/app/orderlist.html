@@ -55,16 +55,16 @@
 
                 <!--#1-->
                 <div class="tab-pane active" id="1" ng-controller="todo">
-                <ul class="list" ng-repeat="shop in rec.data">
-                    <li class="item item-toggle">
+                <ul class="list" ng-repeat="shop_list in rec.data">
+                    <li class="item item-toggle" ng-repeat="shop in shop_list.shop">
                        <i class="icon ion-reply"></i>
                         {{shop.name}}
                        <label class="toggle toggle-positive">
                         {{shop.number}}
                        </label>
                     </li>
-                    <li class="item item-cart" ng-repeat="item in rec.data">
-                       <img src="1.png">
+                    <li class="item item-cart" ng-repeat="item in shop_list.shop">
+                       <img src="{{item.pic}}">
                        <h2>{{item.medicine_name}}</h2>
                        <p>price ￥{{item.price}}</p>
                        <label class="btn">
@@ -97,7 +97,7 @@
                 <!--#2-->
                 <div class="tab-pane" id="2" ng-controller="todo">
                 <ul class="list">
-                  <div  ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
+                  <div ng-repeat="shop in res.data.shoplist"><!--shoplist???-->
                     <li class="item item-toggle">
                        <i class="icon ion-reply"></i>
                        {{shop.name}}
