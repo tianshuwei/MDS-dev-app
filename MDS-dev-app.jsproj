@@ -171,6 +171,7 @@
     <Content Include="views\app\register.html" />
     <Content Include="views\app\shop.html" />
     <Content Include="views\app\yao.html" />
+    <Content Include="views\app\yaolist.html" />
     <Folder Include="img\phones\" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
