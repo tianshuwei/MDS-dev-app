@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>联系卖家</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+
+    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
+    <script src="../../scripts/an_js/contactseller.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="appModule" ng-controller="todo">
+    <ion-header-bar class="bar-calm">
+        <div class="row">
+            <div class="col col-10"><i class="icon ion-star"></i></div>
+            <div class="col col-65">{{rec.data.storename}}</div>
+            <div class="col col-25">进入店铺</div>
+        </div>
+    </ion-header-bar>
+
+    <ion-content ng-app>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="">
+          </label>
+        </div>
+    </ion-content>
+</body>
+</html>
+

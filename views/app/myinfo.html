@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的资料</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+
+    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
+    <script src="../../scripts/an_js/shop.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="appModule">
+    <ion-header-bar class="bar-calm">
+        <div class="row">
+            <div class="col col-10"><i class="icon ion-star"></i></div>
+            <div class="col col-90">我的资料</div>
+        </div>
+    </ion-header-bar>
+
+    <ion-content ng-app>
+        <div class="row">
+            <div class="col col-20">姓名：</div>
+            <label class="item-input-wrapper">
+              <i class="icon ion-ios7-search placeholder-icon"></i>
+              <input type="search" placeholder="">
+            </label>
+            <div class="col col-20"></div>
+        </div>
+        <div class="row">
+            <div class="col col-20">邮箱：</div>
+            <label class="item-input-wrapper">
+              <i class="icon ion-ios7-search placeholder-icon"></i>
+              <input type="search" placeholder="">
+            </label>
+            <div class="col col-20"></div>
+        </div>
+        <div class="row">
+            <div class="col col-20">联系方式：</div>
+            <label class="item-input-wrapper">
+              <i class="icon ion-ios7-search placeholder-icon"></i>
+              <input type="search" placeholder="">
+            </label>
+            <div class="col col-20"></div>
+        </div>
+        <div class="row">
+            <div class="col col-20">收货地址：</div>
+            <label class="item-input-wrapper">
+              <i class="icon ion-ios7-search placeholder-icon"></i>
+              <input type="search" placeholder="">
+            </label>
+            <div class="col col-20"></div>
+        </div>
+        <label class="btn">
+            <button class="button">
+                保存
+            </button>
+        </label>
+    </ion-content>
+</body>
+</html>
+

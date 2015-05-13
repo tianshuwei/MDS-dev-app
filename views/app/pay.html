@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>付款界面</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+
+    <link href="../../css/mobile/ionic.css" rel="stylesheet">
+
+    <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/lib/ionic/angular/angular.js"></script>
+    <script src="../../scripts/an_js/pay.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="appModule">
+    <ion-header-bar class="bar-calm">
+        <div class="row">
+            <div class="col col-10"><i class="icon ion-star"></i></div>
+            <div class="col col-90">付款</div>
+        </div>
+    </ion-header-bar>
+
+    <ion-content ng-app>
+        <div class="list" ng-controller="ShopListCtrl" ng-repeat="money in rec.data">
+            <a class="item">
+                <h2>总价：{{money.number}}</h2>
+            </a>
+            <label class="btn">
+            <button class="button">
+                付款
+            </button>
+        </label>
+        </div>
+    </ion-content>
+</body>
+</html>
+
