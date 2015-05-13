@@ -45,11 +45,8 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
 });
 
 appModule.controller('ShopListCtrl', function ($scope, $http) {
-	$scope.address={
-        longitude:'121.0',
-        latitude:'30.0'
-    };
-	$http.get(url("/ShowDrugstoreServlet"+"?longitude="+$scope.address.longitude+"&&latitude="+$scope.address.latitude+"&page=1")).success(function(data) {
+	$scope.userID=62;
+	$http.get(url("/OrderCenterServlet"+"?userID="+$scope.userID+"&page=1")).success(function(data) {
 	$scope.rec = data;
 	});
 });

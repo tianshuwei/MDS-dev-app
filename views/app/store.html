@@ -12,16 +12,16 @@
 
     <script src="../../scripts/lib/ionic/ionic.bundle.js"></script>
     <script src="../../scripts/lib/ionic/angular/angular.js"></script>
-    <script src="../../scripts/an_js/my_shop_cart.js"></script>
+    <script src="../../scripts/an_js/store.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="../../cordova.js"></script>
 </head>
 <body ng-app="appModule">
-    <ion-header-bar class="bar-calm">
-        <div class="row">
+    <ion-header-bar class="bar-calm" >
+        <div class="row" ng-controller="todo">
             <div class="col col-20"><i class="icon ion-briefcase"></i></div>
-            <div class="col col-30">药店列表</div>
+            <div class="col col-30">{{rec.data.storeName}}</div>
         </div>
     </ion-header-bar>
 
@@ -42,7 +42,7 @@
     <ion-content ng-app>
         <div ng-controller="todo">
             <ul class="list">
-                <li class="item item-cart" ng-repeat="cart_list_item in rec.data">
+                <li class="item item-cart" ng-repeat="item in rec.data.drugList">
                     <img src="1.png">
                     <h2>{{item.YaoName}}</h2>
                     <p>{{item.price}}</p>
