@@ -51,7 +51,7 @@
             <div class="col-10"><i class="icon ion-ios-loop-strong"></i></div>
         </div>
         <div class="list" ng-controller="ShopListCtrl">
-            <a class="item item-thumbnail-left" href="yao.html" ng-repeat="shop in rec.data">
+            <a class="item item-thumbnail-left" href="yao.html?sotreID={{shop.storeID}}" ng-repeat="shop in rec.data">
                 <img src="{{shop.StorePic}}">
                 <h2>{{shop.StoreName}}</h2>
                 <p>热线:{{shop.ServiceHotline}}</p>

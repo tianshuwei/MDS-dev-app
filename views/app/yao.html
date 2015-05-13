@@ -28,7 +28,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
     <!-- ZXQ-04-12修改 -->
-<body ng-app="todo">
+<body ng-app="appModule">
     <ion-header-bar class="bar-calm">
         <div class="row">
         <div class="col col-10"><i class="icon ion-star"></i></div>
@@ -54,7 +54,7 @@
             <div class="col col-50"><button class="button button-light">加入购物车</button></div>
             </div>
           </div>-->
-        <div class="list card" ng-controller="">
+        <div class="list card" ng-controller="DrugListCtrl">
             <div ng-repeat="item in phones">
                 <div class="item item-image">
                     <img src={{item.shopname}} +" .png" height="170">

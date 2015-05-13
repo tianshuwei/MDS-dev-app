@@ -44,12 +44,14 @@ var appModule = angular.module('appModule', ["ionic"], function($httpProvider){
     }];
 });
 
-appModule.controller('ShopListCtrl', function ($scope, $http) {
-	$scope.address={
-        longitude:'121.0',
-        latitude:'30.0'
-    };
-	$http.get(url("/ShowDrugstoreServlet"+"?longitude="+$scope.address.longitude+"&&latitude="+$scope.address.latitude+"&page=1")).success(function(data) {
+appModule.controller('DrugListCtrl', function ($scope, $http) {
+  function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]); return null;
+  }
+	$scope.drugID = getUrlParam(drugID) || 1;
+	$http.get(url("/showDrug"+"?sotreID="+$scope.drugID)).success(function(data) {
 	$scope.rec = data;
 	});
 });
